@@ -1,0 +1,45 @@
+
+scss_files: 'app/assets/stylesheets/**/*.scss'
+
+linters:
+
+  # Ignore whitespace-related problems
+  EmptyLineBetweenBlocks:
+    enabled: false
+  Indentation:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  SpaceAfterComma:
+    enabled: false
+  SpaceAfterPropertyColon:
+    enabled: false
+  SpaceBeforeBrace:
+    enabled: false
+
+  # Permit single or double quoted strings
+  StringQuotes:
+    enabled: false
+
+  # TODO: Resolve the following violations
+
+  ColorKeyword:
+    enabled: false
+  ColorVariable:
+    enabled: false
+  HexLength:
+    enabled: false
+  HexNotation:
+    enabled: false
+  IdSelector:
+    enabled: false
+  LeadingZero:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  SelectorDepth:
+    enabled: false
+  VendorPrefix:
+    enabled: false
+  ZeroUnit:
+    enabled: false

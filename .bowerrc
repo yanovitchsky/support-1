@@ -1,0 +1,6 @@
+{
+  "directory": "vendor/assets/components/",
+  "analytics": false,
+  "timeout": 120000,
+  "registry": "https://registry.bower.io"
+}
