@@ -161,12 +161,9 @@ group :development, :test do
   # Audit Gemfile for security vulnerabilities
   gem 'bundler-audit', require: false
   gem 'byebug'
-  gem 'pry'
-  gem 'pry-byebug'
   gem 'spring', '~> 2.0.2'
   gem 'annotate'
   gem 'brakeman', require: false
-  gem 'rubocop'
   gem 'scss-lint'
   gem 'awesome_print'
   gem 'rb-readline'

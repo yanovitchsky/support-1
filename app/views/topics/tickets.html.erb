@@ -1,12 +1,3 @@
-<%
-################################################################################
-# NOTE: It is STRONGLY suggested that if you wish to customize the look and feel
-# of your Helpy, that you create a custom theme instead.  This will allow
-# you to override any views or styles you wish to, without compromising your
-# ability to upgrade in the future
-################################################################################
-%>
-
 <%- title "#{AppSettings['settings.site_name']}: #{@page_title}" %>
 
 <div class="ticket-header row vcenter">
@@ -17,10 +8,11 @@
   </div>
   <div class="col-md-1">
   </div>
-  <div class="col-md-1">
-  </div>
   <div class="last-active less-important col-md-2 text-right">
     <%= t(:last_activity) %>
+  </div>
+  <div class="col-md-1">
+    <button class="btn btn-default"><%= "#{t(:open_ticket, default: 'Nouveau ticket')}" %></button>
   </div>
 </div>
 <%= render :partial => 'topics/ticket', :collection => @topics %>
@@ -32,3 +24,7 @@
 <div class="text-right">
   <%= paginate @topics %>
 </div>
+
+<%# <%= link_to t(:open_new_discussion, default: "Open Discussion"), new_admin_topic_path,
+    remote: true, class: 'btn btn-primary' if tickets? %>
+<%# <button class="btn btn-primary"><%= "#{t(:open_ticket, default: 'Open a new ticket')}" %>

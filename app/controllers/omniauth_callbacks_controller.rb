@@ -30,7 +30,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # @user = user
       session['omniauth_uid'] = env['omniauth.auth'].uid
 
-      @page_title = "Please complete your signup"
+      # @page_title = "Please complete your signup"
+      @page_title = "Veuillez vous authentifier"
       # render "users/finish_signup"
       redirect_to finish_signup_path
     else

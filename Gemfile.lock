@@ -374,7 +374,6 @@ GEM
       listen (~> 2.2)
       mail (>= 2.0.3)
       maildir (>= 0.5.0)
-    method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2020.0512)
@@ -436,7 +435,6 @@ GEM
       activerecord (>= 3.0, < 6.0)
       activesupport (>= 3.0, < 6.0)
       request_store (~> 1.1)
-    parallel (1.19.2)
     parser (2.7.2.0)
       ast (~> 2.4.1)
     pg (0.20.0)
@@ -451,12 +449,6 @@ GEM
     premailer-rails (1.11.1)
       actionmailer (>= 3)
       premailer (~> 1.7, >= 1.7.9)
-    pry (0.13.1)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
-    pry-byebug (3.6.0)
-      byebug (~> 10.0)
-      pry (~> 0.10)
     public_suffix (4.0.6)
     rack (1.6.13)
     rack-accept (0.4.5)
@@ -527,23 +519,12 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rexml (3.2.4)
     roo (2.8.3)
       nokogiri (~> 1)
       rubyzip (>= 1.3.0, < 3.0.0)
     route_translator (4.4.1)
       actionpack (>= 3.2, < 5.0)
       activesupport (>= 3.2, < 5.0)
-    rubocop (0.84.0)
-      parallel (~> 1.10)
-      parser (>= 2.7.0.1)
-      rainbow (>= 2.2.2, < 4.0)
-      rexml
-      rubocop-ast (>= 0.0.3)
-      ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.0.1)
-      parser (>= 2.7.1.5)
     ruby-hmac (0.4.0)
     ruby-progressbar (1.10.1)
     ruby2_keywords (0.0.2)
@@ -620,7 +601,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
-    unicode-display_width (1.7.0)
     unicorn (5.7.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -729,8 +709,6 @@ DEPENDENCIES
   pg (~> 0.20.0)
   pg_search
   premailer-rails
-  pry
-  pry-byebug
   rack-cors
   rails (= 4.2.11.1)
   rails-i18n (~> 4.0.9)
@@ -743,7 +721,6 @@ DEPENDENCIES
   recaptcha (< 3)
   roo
   route_translator
-  rubocop
   sass-rails (~> 5.0.7)
   scout_apm
   scss-lint

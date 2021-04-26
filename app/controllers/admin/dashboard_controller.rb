@@ -15,6 +15,7 @@ class Admin::DashboardController < Admin::BaseController
       redirect_to admin_users_path
     else
       redirect_to admin_blank_dashboard_path
+      # redirect_to admin_topics_path
     end
   end
 
