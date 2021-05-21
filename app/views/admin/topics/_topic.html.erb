@@ -2,7 +2,9 @@
   <td>
     <%= check_box_tag "topic_ids[]", topic.id, false, class: 'topic-checkbox pull-left' %>
     <span class="user-thumbnail pull-right hidden-xs">
-      <%= link_to avatar_image(topic.user, size=40), admin_user_path(topic.user.id), remote: true if topic.user.present? %>
+      <%# <%= link_to avatar_image(topic.user, size=40), admin_user_path(topic.user.id), remote: true if topic.user.present? %>
+      <%= avatar_image(topic.user, size=40) %>
+
     </span>
   </td>
 

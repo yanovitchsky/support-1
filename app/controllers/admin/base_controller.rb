@@ -80,7 +80,7 @@ class Admin::BaseController < ApplicationController
   # Used by topics#index and #show and called from other methods that need to
   # refresh the UI
   def get_tickets_by_status
-    @status = params[:status] || "active"
+    @status = params[:status] || "mine"
     if current_user.is_restricted? && teams?
       topics_raw = Topic.all.tagged_with(current_user.team_list, any: true)
     else

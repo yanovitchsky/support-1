@@ -4,9 +4,11 @@
   <%= hide_responsive_nav %>
 </div>
 <ul class="list-unstyled nav-items"  data-hook="ticket-stats">
-  <%= render partial: 'admin/topics/nav_item', locals: { status: 'active', label: t(:active), count: @active } %>
-  <%= render partial: 'admin/topics/nav_item', locals: { status: 'new', label: t(:new), count: @new } %>
   <%= render partial: 'admin/topics/nav_item', locals: { status: 'mine', label: t(:mine), count: @mine } %>
+  <% if current_user.admin? %>
+    <%= render partial: 'admin/topics/nav_item', locals: { status: 'active', label: t(:active), count: @active } %>
+  <% end %>
+  <%= render partial: 'admin/topics/nav_item', locals: { status: 'new', label: t(:new), count: @new } %>
   <%= render partial: 'admin/topics/nav_item', locals: { status: 'pending', label: t(:pending), count: @pending } %>
   <% if current_user.is_admin? %>
     <li>&nbsp;</li>

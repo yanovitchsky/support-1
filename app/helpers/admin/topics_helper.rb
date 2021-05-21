@@ -58,6 +58,9 @@ module Admin::TopicsHelper
 
   def agents_for_select
     User.agents.all.map { |user| [user.name, user.id] }
+    # User.find(params[:user_id]) : current_user
+    # User.agents.first.name
+    # user_name = topic.user.name
   end
 
   def channels_collection
@@ -85,6 +88,10 @@ module Admin::TopicsHelper
 
   def ticket_priority_collection
     Topic.priorities.keys.map { |priority| [t("#{priority}_priority"), priority] }
+  end
+
+  def define_collection
+    [t('à_definir')]
   end
 
   def ticket_tag_collection

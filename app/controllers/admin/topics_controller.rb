@@ -121,7 +121,7 @@ class Admin::TopicsController < Admin::BaseController
 
   # Assigns a discussion to another agent
   def assign_agent
-    assigned_user = User.find(params[:assigned_user_id])
+    assigned_user = current_user
     bulk_post_attributes = []
     unless params[:assigned_user_id].blank?
       #handle array of topics
@@ -130,14 +130,13 @@ class Admin::TopicsController < Admin::BaseController
         # this is to give note attribution below
         previous_assigned_id = topic.assigned_user_id || params[:assigned_user_id]
         bulk_post_attributes << {body: I18n.t(:assigned_message, assigned_to: assigned_user.name), kind: 'note', user_id: previous_assigned_id, topic_id: topic.id}
-
+        
         # Calls to GA
         tracker("Agent: #{current_user.name}", "Assigned to #{assigned_user.name.titleize}", @topic.to_param, 0)
       end
     end
 
     @topics.bulk_agent_assign(bulk_post_attributes, assigned_user.id) if bulk_post_attributes.present?
-
     ticketing_ui
   end
 

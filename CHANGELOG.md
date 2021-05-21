@@ -1,5 +1,10 @@
-## VERSION 2.8.0
+## VERSION
+REMOVING 
+- Remove the tab user from the admin header for the role agent
+- Remove abilities for the agent to see active tickets
+- Remove the right to see other users to the agent role
 
+## VERSION 2.8
 Version 2.8 contains important security updates and the following new featuers:
 
 - NEW It is now possible create users one at a time, with or without inviting them.

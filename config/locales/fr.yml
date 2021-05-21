@@ -137,7 +137,7 @@ fr:
 
   # Admin main/statuses
   support_pipeline: Pipeline de support
-  new: Nouveaux
+  new: Nouveau
   active: Actifs
   open: Ouverts
   mine: Mes tickets

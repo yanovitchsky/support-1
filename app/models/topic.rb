@@ -58,7 +58,7 @@ class Topic < ActiveRecord::Base
   scope :open, -> { where(current_status: "open") }
   scope :unread, -> { where("assigned_user_id = ? OR current_status = ?", nil, "new").where.not(current_status: 'closed') }
   scope :pending, -> { where(current_status: "pending") }
-  scope :mine, -> (user) { where(assigned_user_id: user) }
+  scope :mine, -> (user) { where(user_id: user) }
   scope :closed, -> { where(current_status: "closed") }
   scope :spam, -> { where(current_status: "spam")}
   scope :trash, -> { where(current_status: "trash")}
