@@ -13,7 +13,7 @@
 
       <%= f.simple_fields_for @user, validate: true do |u| %>
         <%= u.input :name, class: 'disable-empty' %>
-        <%= u.input :home_phone, class: 'disable-empty' %>
+        <%# <%= u.input :home_phone, class: 'disable-empty' %>
         <%= content_tag(:div, '', class: 'fas fa-angle-down pull-right cc-bcc-toggle', role: 'button') %>
 
         <%= u.input :email, class: 'disable-empty', label: "#{t('activerecord.attributes.user.email')} (#{link_to 'generate temporary', '#', class: 'generate-temp'})".html_safe %>
@@ -25,7 +25,7 @@
       <%= i.input :cc, label: false, placeholder: 'cc:' %>
       <%= i.input :bcc, label: false, placeholder: 'bcc:' %>
       </span>
-      <%= i.input :body, as: :summernote, label: false, class: 'disable-empty' %>
+      <%= i.input :body, as: :summernote, label: false, class: 'disable-empty' , required: true %>
       <%= render partial: "admin/shared/assistant" %>
       <%= label_tag 'post_reply_id', "#{t(:select_common, default: 'Insert Common Reply')} (#{link_to(t(:edit, default: 'Edit'), admin_category_path(1), target: 'blank')})".html_safe, class: 'control-label' %>
       <%= f.select_tag 'post[reply_id]', grouped_options_for_select(i18n_reply_grouped_options, nil, prompt: ''), class: 'form-control', id: 'post_reply_id' %>
@@ -45,7 +45,7 @@
       <%# <%= f.button :submit, t(:submit_start_note, default: 'Create Note'), class: 'btn btn-default disableable submit-note' %> 
     </div>
     <div class="col-md-4">
-      <%# <% if current_user.admin? %> %>
+      <%# <% if current_user.admin? %> 
       <%= f.input :channel, collection: channels_collection, as: :select, include_blank: false, item_wrapper_class: 'channel-item', item_wrapper_tag: :div, class: 'channel-toggle' %>
       <% if teams = admin_teams %>
         <%= f.input(:team_list, collection: teams, :label => t(:assign_to), locale: I18n.locale, prompt: "", style: "display:none;") if teams? and teams.count > 0 %>
@@ -79,6 +79,7 @@ $('[data-provider="summernote"]').each(function(){
       lineWrapping: true,
       tabMode: 'indent'
     },
+    required: true,
     hint: {
       match: /:([\-+\w]+)$/,
       search: function (keyword, callback) {
@@ -116,6 +117,7 @@ $.ajax({
 });
 </script>
 <script>
+  // document.getElementById("boby_text_field").required = true;
   $('.submit-note').off('click').on('click', function(){
     $('#topic_post_kind').val('note');
   });

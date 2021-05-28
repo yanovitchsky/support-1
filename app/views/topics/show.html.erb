@@ -12,7 +12,7 @@
 <div id="ticket-info" class="row">
   <div class="col-md-3 col-sm-3 hidden-xs" id="left-col-user-info">
     <div class="doc-meta">
-      <div class="more-important meta-header">Ticket Number:</div>
+      <div class="more-important meta-header">Numero du ticket:</div>
       <div class="less-important"><%= @topic.id %></div>
     </div>
     <div class="doc-meta">
@@ -22,12 +22,12 @@
           <%= avatar_image(@topic.assigned_user, size=40) %>
           <%= @topic.assigned_user.name.titleize %>
         <% else %>
-          Unassigned
+          Aucun agent
         <% end %>
       </div>
     </div>
     <div class="doc-meta">
-      <div class="more-important meta-header">Opened On:</div>
+      <div class="more-important meta-header">Crée à: </div>
       <div class="less-important"><%= @topic.created_at %></div>
     </div>
   </div>

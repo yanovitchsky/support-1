@@ -1,11 +1,11 @@
 send_email: false
-site_name: Helpy Support
+site_name: SIPAD
 
 # Site Settings
 parent_site: /parent-redirect.html # This tells Helpy how to provide a link back to your main site
 parent_company: Main Site # This is the parent company your helpdesk is providing support for
 site_url: http://support.yourdomain.com # This is the URL of your support site
-site_name: Helpy Support # This is the name of your support site
+site_name: SIPAD # This is the name of your support site
 site_tagline: Support and Helpdesk Software # This is the tagline of your support site
 product_name: # This is the product name your are supporting
 support_phone: # This is support number to be displayed

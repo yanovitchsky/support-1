@@ -11,7 +11,7 @@ fr:
   # Navigation
   knowledgebase: "Base de connaissances"
   community: "Communauté"
-  ask_a_question: "Poser une question"
+  ask_a_question: "Créer un ticket"
   home: "Accueil"
   login: "Connexion"
   logout: "Déconnexion"
@@ -50,7 +50,7 @@ fr:
   submit_reply: "Soumettre une réponse"
   posted: "Posté"
   start_discussion: "Démarrer une nouvelle discussion"
-  submit_start_discussion: "Lancer la discussion"
+  submit_start_discussion: "Créer un ticket"
   should_message_be_private: "Ce message est-il privé?"
   only_support_can_respond: "Seul le support peut répondre (crée un ticket privé)"
   responses_can_come_from_everyone: "Les réponses peuvent venir du support ou de la communauté (recommandé)"
@@ -75,6 +75,7 @@ fr:
   # Get Help
   get_help_header: "Encore besoin d'aide ?"
   get_help_button: "Lancer une discussion avec nous"
+  create_ticket: "Créer un nouveau ticket" 
 
   # Profile
   my_profile: 'Mon profil'

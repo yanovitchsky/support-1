@@ -1,4 +1,7 @@
 <%- title "#{AppSettings['settings.site_name']}: #{@page_title}" %>
+<div class="pull-right nav-new-button">
+  <%= link_to t(:ask_a_question), new_topic_path, class: 'btn btn-primary' %> 
+</div>
 
 <div class="ticket-header row vcenter">
   <div class="col-md-8 text-left">
@@ -10,9 +13,7 @@
   </div>
   <div class="last-active less-important col-md-2 text-right">
     <%= t(:last_activity) %>
-  </div>
-  <div class="col-md-1">
-    <button class="btn btn-default"><%= "#{t(:open_ticket, default: 'Nouveau ticket')}" %></button>
+    
   </div>
 </div>
 <%= render :partial => 'topics/ticket', :collection => @topics %>

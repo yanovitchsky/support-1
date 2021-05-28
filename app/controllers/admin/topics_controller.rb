@@ -34,6 +34,7 @@ class Admin::TopicsController < Admin::BaseController
   before_action :get_all_teams, except: ['shortcuts']
   before_action :set_hash_id_salt
   before_action :get_topics_cohort, only: ['update_topic', 'assign_agent', 'unassign_agent', 'toggle_privacy', 'assign_team', 'unassign_team']
+  # do a validation for the topics params
 
   respond_to :js, :html, only: :show
   respond_to :js
@@ -434,7 +435,7 @@ class Admin::TopicsController < Admin::BaseController
         )
 
         # Send copy of message to user
-        PostMailer.new_post(@post .id).deliver_later
+        PostMailer.new_post(@post.id).deliver_later
 
         # track event in GA
         tracker('Request', 'Post', 'New Topic')

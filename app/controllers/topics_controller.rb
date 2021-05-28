@@ -197,7 +197,7 @@ class TopicsController < ApplicationController
   end
 
   def set_new_page_title
-    @page_title = t(:get_help_button, default: "Open a ticket")
+    @page_title = t(:create_ticket, default: "Open a ticket")
     add_breadcrumb @page_title
   end
 

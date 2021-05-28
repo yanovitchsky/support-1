@@ -101,7 +101,7 @@ class User < ActiveRecord::Base
   is_gravtastic
 
   after_invitation_accepted :set_role_on_invitation_accept
-  after_create :enable_notifications_for_admin
+  after_create :set_role_on_create, :enable_notifications_for_admin
   before_save :reject_invalid_characters_from_name
   acts_as_taggable_on :teams
 
@@ -120,6 +120,12 @@ class User < ActiveRecord::Base
 
   def set_role_on_invitation_accept
     self.role = self.role.presence || "agent"
+    self.active = true
+    self.save
+  end
+
+  def set_role_on_create
+    self.role = "agent"
     self.active = true
     self.save
   end

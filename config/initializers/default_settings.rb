@@ -1,6 +1,6 @@
 # General Settings:
 
-AppSettings.defaults["branding.ticketing_color"] = "#245566"
+AppSettings.defaults["branding.ticketing_color"] = "#089090"
 AppSettings.defaults["branding.ticketing_bg_color"] = "#f6f7e8"
 AppSettings.defaults["branding.ticketing_bg_image"] = ""
 AppSettings.defaults["branding.display_branding"] = "1"

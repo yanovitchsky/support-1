@@ -58,7 +58,7 @@ class Admin::SettingsController < Admin::BaseController
     settings_update(update_params)
 
     # prevent null value for colors
-    AppSettings["branding.ticketing_color"] = "#245566" if params["branding.ticketing_color"].blank?
+    AppSettings["branding.ticketing_color"] = "#089090" if params["branding.ticketing_color"].blank?
     AppSettings["branding.ticketing_bg_color"] = "#f6f7e8" if params["branding.ticketing_bg_color"].blank?
 
     flash[:success] = t(:settings_changes_saved,
