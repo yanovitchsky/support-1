@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.11.1'
 
+gem 'devise-jwt', '~> 0.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.20.0'
 gem 'pg_search'
@@ -50,7 +51,7 @@ gem "groupdate"
 gem "chartkick"
 
 # Auth Gems
-gem 'devise', '<= 5.0.0'
+gem 'devise', '~> 4.0'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views'
 gem 'devise_invitable'
